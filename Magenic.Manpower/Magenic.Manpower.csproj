@@ -66,15 +66,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="Index.html" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
     <Content Include="modules\dashboard\layoutFooter.js" />
     <Content Include="modules\dashboard\layoutHeader.js" />
     <Content Include="modules\login\LoginController.js" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\angular-ui-router.js" />
-    <Content Include="Scripts\angular-ui-router.min.js" />
-    <Content Include="Scripts\version.json" />
-    <Content Include="Scripts\errors.json" />
-    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="js\angular-ui-router.js" />
+    <Content Include="js\angular-ui-router.min.js" />
+    <Content Include="js\angular.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -85,8 +90,8 @@
   <ItemGroup>
     <Content Include="js\app.module.js" />
     <Content Include="js\config.route.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
+    <Content Include="js\angular.js" />
+    <Content Include="js\angular.min.js" />
     <Content Include="modules\dashboard\footer.html" />
     <Content Include="modules\dashboard\header.html" />
     <Content Include="modules\login\login.html" />
@@ -95,9 +100,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="css\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
