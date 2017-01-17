@@ -1,0 +1,62 @@
+﻿<style>
+    #roles {
+        font-family: verdana;
+        font-size: 12px;
+    }
+     table, th, td {
+         border: 1px solid lightgray;
+         border-collapse: collapse;
+         text-align: left; 
+         padding: 5px;
+     }
+
+    table {
+        width: 500px;
+    }
+    .genericborder {
+        border: 1px solid lightgray;
+        padding: 5px;
+        margin-top: 5px; 
+        margin-bottom: 5px;
+    }
+</style>
+<div id="roles">
+    <div style="margin-top: 10px; margin-bottom: 10px;">
+        <strong>Roles and Permission</strong>
+    </div>
+    <div class="genericborder">
+        <label>Name:</label>
+        <input type="text" style="border: 1px solid lightgray; padding-left: 3px; margin-left: 5px; width: 413px !important; text-align: left;" value="Superman" disabled="disabled" />
+        <button>...</button>
+    </div>
+    <div class="genericborder" style="min-width:98% !important;overflow-x:auto;  ">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Permission Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="text-align: left;">
+                    <td><input type="checkbox"/></td>
+                    <td>User can request manpower</td>
+                </tr>
+                <tr style="text-align: left;">
+                    <td><input type="checkbox" /></td>
+                    <td>User can add applicant as candidate to a reference number</td>
+                </tr>
+                <tr style="text-align: left;">
+                    <td><input type="checkbox" /></td>
+                    <td>User can cancel a request</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="genericborder">
+        <button>Submit</button>
+        <button>Cancel</button>
+    </div>
+</div>
+
+
