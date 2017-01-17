@@ -13,5 +13,9 @@
                 controller: 'LoginController',
                 controllerAs: 'vm'
             })
+            .state('primarySkills', {
+                url: '/primaryskills',
+                templateUrl: '/templates/primarySkills.html'
+            })
     }])
 })();

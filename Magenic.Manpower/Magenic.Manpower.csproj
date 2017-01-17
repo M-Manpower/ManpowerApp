@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="modules\primarySkills\primarySkillsList.component.js" />
+    <Content Include="modules\primarySkills\primarySkillsList.template.html" />
     <Content Include="js\controllers\LoginController.js" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-route.js" />
@@ -90,6 +92,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Index.html" />
     <Content Include="templates\login.html" />
+    <Content Include="templates\primarySkills.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

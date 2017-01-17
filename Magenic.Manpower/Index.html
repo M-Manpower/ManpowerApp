@@ -7,11 +7,19 @@
     <script type="text/javascript" src="/Scripts/angular-ui-router.js"></script>
     <script type="text/javascript" src="/js/app.module.js"></script>
     <script type="text/javascript" src="/js/config.route.js"></script>
-    <script type="text/javascript" src="/js/controllers/LoginController.js"></script>
+    <script type="text/javascript" src="/js/controllers/LoginController.js"></script>    
+
+    <!--modules-->    
+    <script src="/modules/primarySkills/primarySkillsList.component.js"></script>
 </head>
 <body>
+    
     <div id="container">
        <ui-view></ui-view>
     </div>
+    
+   <br/>
+   <a ui-sref="primarySkills">primary skills</a>
+
 </body>
 </html>

@@ -1,0 +1,22 @@
+﻿
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="primarySkill in $ctrl.primarySkills track by $index" ng-click="$ctrl.selectedSkill(primarySkill.id)">
+            <td>{{primarySkill.name}}</td>
+            <td>{{primarySkill.description}}</td>
+            <td>
+                <input type="checkbox" ng-model="primarySkill.active" />
+            </td>
+        </tr>       
+    </tbody>
+</table>
+
+<button ng-click="$ctrl.deactivate()">Deactivate</button>
+<button>Add New</button>
