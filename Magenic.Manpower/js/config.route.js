@@ -1,20 +1,17 @@
 ﻿(function () {
     'use strict';
 
-    //angular.module('manpowerApp')
-    //.run(['routehelper', function (routehelper) {
-    //    routehelper.configureRoutes(getRoutes());
-    //}]);
+    angular.module('manpowerApp', ['ui.router'])
+    .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
+        $urlRouterProvider.otherwise('/login');
 
-    //function getRoutes() {
-    //    return [{
-    //        url: '/dashboard',
-    //        config: {
-    //            templateUrl: '',
-    //            controller: '',
-    //            controllerAs: 'vm',
-    //            title: ''
-    //        }
-    //    }]
-    //};
+        $stateProvider
+            .state('login',
+            {
+                url: '/login',
+                templateUrl: '/templates/login.html',
+                controller: 'LoginController',
+                controllerAs: 'vm'
+            })
+    }])
 })();
