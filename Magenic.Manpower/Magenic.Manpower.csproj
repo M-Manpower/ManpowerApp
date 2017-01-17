@@ -66,16 +66,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\controllers\LoginController.js" />
+    <Content Include="modules\dashboard\layoutFooter.js" />
+    <Content Include="modules\dashboard\layoutHeader.js" />
+    <Content Include="modules\login\LoginController.js" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -88,8 +87,9 @@
     <Content Include="js\config.route.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Index.html" />
-    <Content Include="templates\login.html" />
+    <Content Include="modules\dashboard\footer.html" />
+    <Content Include="modules\dashboard\header.html" />
+    <Content Include="modules\login\login.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -97,8 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
-    <Folder Include="js\directives\" />
-    <Folder Include="js\services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
