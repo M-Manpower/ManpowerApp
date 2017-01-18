@@ -16,10 +16,10 @@ namespace Magenic.Manpower.Data
     {
         public Nullable<int> Id { get; set; }
         public string ReferenceString { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public System.DateTime DateUpdated { get; set; }
-        public Nullable<int> ManpowerRequestId { get; set; }
-        public Nullable<int> StatusID { get; set; }
+        public System.DateTime DateCreated { get; set; }
+        public Nullable<System.DateTime> DateUpdated { get; set; }
+        public int ManpowerRequestId { get; set; }
+        public int StatusID { get; set; }
     
         public virtual ManpowerRequest ManpowerRequest { get; set; }
         public virtual Status Status { get; set; }
