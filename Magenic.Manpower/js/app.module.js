@@ -3,6 +3,7 @@
 
     angular.module('manpowerApp',
         ['loginApp',
+        'requestFormApp',
         'ui.router'
         ]);
 })();
