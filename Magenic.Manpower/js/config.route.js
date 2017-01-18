@@ -24,5 +24,12 @@
                 controller: 'rolesCtrl',
                 controllerAs: 'vm'
               })
+            .state('requestForm',
+            {
+                url: '/requestForm',
+                templateUrl: '/modules/requestForm/requestForm-tmpl.html',
+                controller: 'RequestFormController',
+                controllerAs: 'vm'
+            })
     }])
 })();
