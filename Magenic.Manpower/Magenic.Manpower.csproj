@@ -66,18 +66,31 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="modules\primarySkills\primarySkillsList.component.js" />
-    <Content Include="modules\primarySkills\primarySkillsList.template.html" />
-    <Content Include="js\controllers\LoginController.js" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="Index.html" />
+    <Content Include="js\app.module.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="modules\dashboard\layoutFooter.js" />
+    <Content Include="modules\dashboard\layoutHeader.js" />
+    <Content Include="modules\requestForm\requestForm-mdl.js" />
+    <Content Include="modules\requestForm\requestForm-svc.js" />
+    <Content Include="modules\requestForm\requestForm-tmpl.html" />
+    <Content Include="modules\requestForm\requestForm-ctrl.js" />
+    <Content Include="modules\login\login.css" />
+    <Content Include="modules\login\login-mdl.js" />
+    <Content Include="modules\login\login-ctrl.js" />
+    <Content Include="modules\technologies\TechController.js" />
+    <Content Include="modules\technologies\techDetails.html" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular-route.min.js" />
-    <Content Include="Scripts\angular-ui-router.js" />
-    <Content Include="Scripts\angular-ui-router.min.js" />
-    <Content Include="Scripts\version.json" />
-    <Content Include="Scripts\errors.json" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="js\angular-ui-router.js" />
+    <Content Include="js\angular-ui-router.min.js" />
+    <Content Include="js\angular.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,23 +99,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\app.module.js" />
     <Content Include="js\config.route.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Index.html" />
-    <Content Include="templates\login.html" />
-    <Content Include="templates\primarySkills.html" />
+    <Content Include="js\angular.js" />
+    <Content Include="js\angular.min.js" />
+    <Content Include="modules\dashboard\footer.html" />
+    <Content Include="modules\dashboard\header.html" />
+    <Content Include="modules\login\login-tmpl.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="css\" />
-    <Folder Include="js\directives\" />
-    <Folder Include="js\services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
