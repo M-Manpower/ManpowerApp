@@ -13,7 +13,7 @@
             .state('login',
             {
                 url: '/login',
-                templateUrl: '/modules/login/login.html',
+                templateUrl: '/modules/login/login-tmpl.html',
                 controller: 'LoginController',
                 controllerAs: 'vm'
             })
