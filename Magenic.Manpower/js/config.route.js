@@ -17,6 +17,10 @@
                 controller: 'LoginController',
                 controllerAs: 'vm'
             })
+            .state('primarySkills', {
+                url: '/primaryskills',
+                templateUrl: '/templates/primarySkills-tpl.html'
+            })
             .state('requestForm',
             {
                 url: '/requestForm',
