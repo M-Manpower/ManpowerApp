@@ -85,8 +85,10 @@
     <Content Include="modules\login\login.css" />
     <Content Include="modules\login\login-mdl.js" />
     <Content Include="modules\login\login-ctrl.js" />
-    <Content Include="modules\technologies\TechController.js" />
-    <Content Include="modules\technologies\techDetails.html" />
+    <Content Include="modules\technologies\techDetails-ctrl.js" />
+    <Content Include="modules\technologies\techDetails-mdl.js" />
+    <Content Include="modules\technologies\techDetails-svc.js" />
+    <Content Include="modules\technologies\techDetails-tmpl.html" />
     <Content Include="packages.config" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular-ui-router.min.js" />

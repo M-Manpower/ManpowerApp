@@ -3,7 +3,7 @@
 
     angular.module('manpowerApp')
     .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
-        $urlRouterProvider.otherwise('/','/login');
+        $urlRouterProvider.otherwise('/', '/login');
 
         $stateProvider
             .state('home',
@@ -23,6 +23,13 @@
                 templateUrl: '/modules/requestForm/requestForm-tmpl.html',
                 controller: 'RequestFormController',
                 controllerAs: 'vm'
+            })
+            .state('techDetails',
+            {
+                url: '/techDetails/:techId',
+                templateUrl: '/modules/technologies/techDetails-tmpl.html',
+                controller: 'TechDetailsController',
+                controllerAs: 'tech'
             })
     }])
 })();
