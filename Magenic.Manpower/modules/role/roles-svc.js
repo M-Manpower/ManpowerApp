@@ -5,18 +5,16 @@
           var getRoles = function () {
             //temporary for sample data population
             return $q(function (resolve, reject) {
-              setTimeout(function () {
-                resolve({
-                  data: [{
-                    name: 'Administrator'
-                  }, {
-                    name: 'Consulting Manager'
-                  }, {
-                    name: 'Human Resource'
-                  }
-                  ]
-                });
-              }, 500);
+              resolve({
+                data: [{
+                  name: 'Administrator'
+                }, {
+                  name: 'Consulting Manager'
+                }, {
+                  name: 'Human Resource'
+                }
+                ]
+              });
             });
           };
 

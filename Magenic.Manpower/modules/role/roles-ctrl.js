@@ -7,6 +7,6 @@
 
             rolesSvc.get().then(function (response) {
                 this.list = response.data;
-            }.bind(this));//need to bind the function because this is a callback
+            }.bind(this));
         })
 })();
