@@ -71,15 +71,20 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Index.html" />
+    <Content Include="js\app.module.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="modules\dashboard\layoutFooter.js" />
     <Content Include="modules\dashboard\layoutHeader.js" />
-    <Content Include="modules\login\LoginController.js" />
     <Content Include="modules\requestForm\requestForm-mdl.js" />
     <Content Include="modules\requestForm\requestForm-svc.js" />
-    <Content Include="modules\requestForm\requestForm-tmp.html" />
+    <Content Include="modules\requestForm\requestForm-tmpl.html" />
     <Content Include="modules\requestForm\requestForm-ctrl.js" />
+    <Content Include="modules\login\login.css" />
+    <Content Include="modules\login\login-mdl.js" />
+    <Content Include="modules\login\login-ctrl.js" />
     <Content Include="modules\technologies\TechController.js" />
     <Content Include="modules\technologies\techDetails.html" />
     <Content Include="packages.config" />
@@ -94,13 +99,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\app.module.js" />
     <Content Include="js\config.route.js" />
     <Content Include="js\angular.js" />
     <Content Include="js\angular.min.js" />
     <Content Include="modules\dashboard\footer.html" />
     <Content Include="modules\dashboard\header.html" />
-    <Content Include="modules\login\login.html" />
+    <Content Include="modules\login\login-tmpl.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,8 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('manpowerApp')
+    angular.module('loginApp')
     .controller('LoginController', ['$scope', function ($scope) {
-        $scope.title = "Login";
+        this.title = "Manpower Request App";
     }]);
 })();
