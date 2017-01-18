@@ -78,6 +78,10 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="modules\dashboard\layoutFooter.js" />
     <Content Include="modules\dashboard\layoutHeader.js" />
+    <Content Include="modules\requestForm\requestForm-mdl.js" />
+    <Content Include="modules\requestForm\requestForm-svc.js" />
+    <Content Include="modules\requestForm\requestForm-tmpl.html" />
+    <Content Include="modules\requestForm\requestForm-ctrl.js" />
     <Content Include="modules\login\login.css" />
     <Content Include="modules\login\login-mdl.js" />
     <Content Include="modules\login\login-ctrl.js" />
