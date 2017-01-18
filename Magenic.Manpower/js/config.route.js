@@ -19,7 +19,7 @@
             })
             .state('primarySkills', {
                 url: '/primaryskills',
-                templateUrl: '/templates/primarySkills.html'
+                templateUrl: '/templates/primarySkills-tpl.html'
             })
             .state('requestForm',
             {

@@ -1,8 +1,10 @@
 ﻿(function () {
     'use strict';
 
+    
     const primarySkillListComponent = {
-        templateUrl: '/modules/primarySkills/primarySkillsList.template.html',
+        bindings: {},
+        templateUrl: 'modules/primarySkills/primarySkillsList-tpl.html',
         controller: function () {
 
             this.$onInit = function () {
@@ -37,9 +39,9 @@
     };
 
 
+    angular.module('manpowerApp')
+         .component('primarySkillsList', primarySkillListComponent);
 
-
-    angular.module('manpowerApp')      
-           .component('primarySkillsList', primarySkillListComponent);
+  
     
 })();
