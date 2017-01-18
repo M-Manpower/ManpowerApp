@@ -1,21 +1,27 @@
 ﻿<table class="table table-striped">
     <thead>
         <tr>
+            <th>
+                <input type="checkbox" ng-model="$ctrl.isAllSkillsSelected" ng-change="$ctrl.selectAllSkills()" />
+            </th>
             <th>Name</th>
             <th>Description</th>
             <th>Active</th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="primarySkill in $ctrl.primarySkills track by $index" ng-click="$ctrl.selectedSkill(primarySkill.id)">
+        <tr ng-repeat="primarySkill in $ctrl.primarySkills track by $index">
+            <td>
+                <input type="checkbox" ng-model="primarySkill.selected" />
+            </td>
             <td>{{primarySkill.name}}</td>
             <td>{{primarySkill.description}}</td>
             <td>
-                <input type="checkbox" ng-model="primarySkill.active" />
+                <i class="glyphicon" ng-class="primarySkill.active ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-remove'"></i>
             </td>
         </tr>
     </tbody>
 </table>
 
-<button ng-click="$ctrl.deactivate()">Deactivate</button>
+<button ng-click="$ctrl.deactivateSelectedSkills()">Deactivate</button>
 <button>Add New</button>
