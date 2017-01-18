@@ -1,8 +1,12 @@
 ﻿CREATE TABLE [dbo].[Role] (
-    [Id]   INT           IDENTITY (1, 1) NOT NULL,
-    [Name] NVARCHAR (50) NOT NULL,
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [Name]        NVARCHAR (50) NOT NULL,
+    [DateCreated] DATETIME      NOT NULL,
+    [DateUpdated] DATETIME      NULL,
     CONSTRAINT [PK_Role] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
 
 
 
