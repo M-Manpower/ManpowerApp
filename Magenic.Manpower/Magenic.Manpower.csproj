@@ -76,6 +76,10 @@
     <Content Include="modules\dashboard\layoutFooter.js" />
     <Content Include="modules\dashboard\layoutHeader.js" />
     <Content Include="modules\login\LoginController.js" />
+    <Content Include="modules\requestForm\requestForm-mdl.js" />
+    <Content Include="modules\requestForm\requestForm-svc.js" />
+    <Content Include="modules\requestForm\requestForm-tmp.html" />
+    <Content Include="modules\requestForm\requestForm-ctrl.js" />
     <Content Include="modules\technologies\TechController.js" />
     <Content Include="modules\technologies\techDetails.html" />
     <Content Include="packages.config" />

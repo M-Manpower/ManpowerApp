@@ -1,0 +1,47 @@
+﻿<ng-form name="requestForm">
+    <div>
+        <label>Project name:</label>
+        <input type="text" ng-model="vm.projectName" />
+    </div>
+    <div>
+        <label>Primary skill:</label>
+        <div ng-repeat="primarySkill in vm.primarySkills">
+            <input type="radio" name="primarySkill" ng-model="vm.primarySkill" ng-value="{{primarySkill}}" />{{primarySkill.Name}}
+        </div>
+    </div>
+    <div>
+        <label>Region:</label>
+        <select ng-model="vm.region" ng-options="x.Name for x in vm.regions"></select>
+    </div>
+    <div>
+        <label>Desired applicant level:</label>
+        <select ng-model="vm.applicantLevel" ng-options="x.Name for x in vm.levels"></select>
+    </div>
+    <div>
+        <label>Estimated # of hires:</label>
+        <input type="text" ng-model="vm.numberOfHires" />
+    </div>
+    <div>
+        <label>Projected start date:</label>
+        <input type="text" ng-model="vm.startDate" />
+    </div>
+    <div>
+        <label>Job description:</label>
+        <input type="text" ng-model="vm.jobDescription" />
+    </div>
+    <div>
+        <label>Primary technologies needed:</label>
+        <div ng-repeat="tech in vm.primaryTechnologies">
+            <input type="radio" name="primaryTechnologies" ng-model="vm.primaryTechnology" ng-value="{{tech}}" />{{tech.Name}}
+        </div>
+    </div>
+    <div>
+        <label>Reason of request:</label>
+        <div ng-repeat="reasonOfRequest in vm.reasonsOfRequest">
+            <input type="radio" name="reasonOfRequest" ng-model="vm.reasonOfRequest" ng-value="{{reasonOfRequest}}" ng-click="vm.submit()" />{{reasonOfRequest.Name}}
+        </div>
+    </div>
+    <div>
+        <button type="submit" ng-click="vm.submit()">Submit</button>
+    </div>
+</ng-form>

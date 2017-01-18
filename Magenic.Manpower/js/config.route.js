@@ -17,5 +17,12 @@
                 controller: 'LoginController',
                 controllerAs: 'vm'
             })
+            .state('requestForm',
+            {
+                url: '/requestForm',
+                templateUrl: '/modules/requestForm/requestForm-tmp.html',
+                controller: 'RequestFormController',
+                controllerAs: 'vm'
+            })
     }])
 })();
