@@ -5,5 +5,5 @@
         ['loginApp',
         'requestFormApp',
         'ui.router'
-        ]);
+        ]).constant('_', window._);
 })();
