@@ -1,12 +1,12 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('manpowerApp', ['ui.router'])
+    angular.module('manpowerApp')
     .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise('/','/login');
 
         $stateProvider
-            .state('/',
+            .state('home',
             {
                 url: '/'
             })
