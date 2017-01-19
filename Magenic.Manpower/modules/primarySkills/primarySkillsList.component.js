@@ -5,29 +5,49 @@
     const primarySkillListComponent = {
         bindings: {},
         templateUrl: 'modules/primarySkills/primarySkillsList.component-tmpl.html',
-        controller: ['_', primarySkillListController]
+        controller: ['$scope','_', 'filterFilter', primarySkillListController]
     };
 
 
-    function primarySkillListController(_) {
-
-        this.filter = "";
+    function primarySkillListController($scope, _, filterFilter) {
+        
+        var ctrl = this;
+        
+        this.filter = "";        
         this.isAllSkillsSelected = false;
+               
+        this.primarySkills = [];
 
         this.$onInit = function () {
-
+            
             this.primarySkills = [
-                { id: 1, name: 'Java', description: 'This is a PL 1', isActive: true, selected: false },
-                { id: 2, name: '.Net', description: 'This is a PL 2', isActive: false, selected: false },
-                { id: 3, name: 'PHP', description: 'This is a PL 3', isActive: true, selected: false },
-                { id: 4, name: 'C#', description: 'This is a PL 4', isActive: false, selected: false },
-                { id: 5, name: 'VB.NET', description: 'This is a PL 5', isActive: true, selected: false }
+               { id: 1, name: 'Java', description: 'This is a PL 1', isActive: true},
+               { id: 2, name: '.Net', description: 'This is a PL 2', isActive: false },
+               { id: 3, name: 'PHP', description: 'This is a PL 3', isActive: true },
+               { id: 4, name: 'C#', description: 'This is a PL 4', isActive: false },
+               { id: 5, name: 'VB.NET', description: 'This is a PL 5', isActive: true }
             ];
 
-        };
+            this.pager = {
+                pageSize: 3,
+                totalItems: this.primarySkills.length,
+                currentPage: 1              
+            };
+
+            this.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
+
+        };  
 
         this.$onChanges = function (changes) {
+            
+        };
 
+        this.filterChange = function () {
+            this.filtered = filterFilter(this.primarySkills, this.filter);
+            
+            this.pager['totalItems'] = this.filtered.length;
+            this.pager['currentPage'] = 1;                        
+            this.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
         };
 
         this.selectAllSkills = function () {
@@ -52,11 +72,20 @@
 
         };
 
+       
+
     };
 
     angular.module('manpowerApp')
-         .component('primarySkillsList', primarySkillListComponent);
-
-
+           .filter('startFrom', function () {
+                return function (input, start) {
+                    if (input) {
+                        start = +start;
+                        return input.slice(start);
+                    }
+                    return [];
+                };
+          })
+          .component('primarySkillsList', primarySkillListComponent);    
 
 })();

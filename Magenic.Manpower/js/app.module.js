@@ -4,6 +4,7 @@
     angular.module('manpowerApp',
         ['loginApp',
         'requestFormApp',
-        'ui.router'
+        'ui.router',
+        'ui.bootstrap'
         ]).constant('_', window._);
 })();

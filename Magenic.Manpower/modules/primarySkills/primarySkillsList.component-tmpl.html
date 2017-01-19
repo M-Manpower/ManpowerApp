@@ -1,12 +1,8 @@
 ﻿
 <div class="form-group col-xs-3">
-    <label>
-        Filter:
-    </label>
-
     <div class="left-inner-addon">
         <i class="glyphicon glyphicon-search"></i>
-        <input type="text" name="filter" class="form-control" ng-model="$ctrl.filter" />
+        <input type="text" name="filter" class="form-control" ng-model="$ctrl.filter" ng-change="$ctrl.filterChange()" />
     </div>
 </div>
 
@@ -24,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="primarySkill in $ctrl.primarySkills | filter: $ctrl.filter track by $index">
+        <tr ng-repeat="primarySkill in $ctrl.filtered = $ctrl.primarySkills | filter: $ctrl.filter | startFrom: ($ctrl.pager.currentPage - 1)*$ctrl.pager.pageSize | limitTo:$ctrl.pager.pageSize track by primarySkill.id">
             <td>
                 <input type="checkbox" ng-model="primarySkill.selected" />
             </td>
@@ -36,8 +32,21 @@
                 <button ng-if="!primarySkill.isActive" class="btn btn-success" ng-click="primarySkill.isActive = true">Activate</button>
             </td>
         </tr>
-    </tbody>
+    </tbody>   
 </table>
+
+<div class="text-center">
+    <ul ng-if="$ctrl.pager.totalItems > $ctrl.pager.pageSize"
+        ng-model="$ctrl.pager.currentPage"
+        uib-pagination 
+        items-per-page="$ctrl.pager.pageSize"
+        total-items="$ctrl.pager.totalItems"
+        max-size="$ctrl.pager.maxSize"
+        boundary-link-numbers="true"
+        rotate="true"></ul>
+</div>
+
+<br/>
 
 <button class="btn btn-warning" ng-click="$ctrl.deactivateSelectedSkills()">Deactivate</button>
 <button class="btn btn-primary">Add New</button>
