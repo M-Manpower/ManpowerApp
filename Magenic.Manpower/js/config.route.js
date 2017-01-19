@@ -25,6 +25,10 @@
                         controller: 'RequestFormController',
                         controllerAs: 'vm'
                     })
+                    .state('primarySkills', {
+                        url: '/primaryskills',
+                        templateUrl: '/templates/primarySkills-tpl.html'
+                    })
 
                     // Roles and Permission (a.k.a. user access)
                     .state('userAccess',
