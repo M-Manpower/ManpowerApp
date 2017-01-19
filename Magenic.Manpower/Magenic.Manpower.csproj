@@ -88,6 +88,7 @@
     <Content Include="modules\technologies\TechController.js" />
     <Content Include="modules\technologies\techDetails.html" />
     <Content Include="modules\userAccess\userAccess-ctrl.js" />
+    <Content Include="modules\userAccess\userAccess-mdl.js" />
     <Content Include="modules\userAccess\userAccess-svc.js" />
     <Content Include="modules\userAccess\userAccess-tmpl.html" />
     <Content Include="packages.config" />

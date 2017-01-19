@@ -20,7 +20,7 @@
         margin-bottom: 5px;
     }
 </style>
-<div id="userAccess" >
+<div id="userAccess">
     <div style="margin-top: 10px; margin-bottom: 10px;">
         <strong>Roles and Permission</strong>
     </div>
@@ -38,7 +38,7 @@
             </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="permission in vm.Permissions" style="text-align: left;">
+                <tr ng-repeat="permission in vm.permissions" style="text-align: left;">
                     <td><input type="checkbox" /></td>
                     <td>{{permission.Description}}</td>
                 </tr>

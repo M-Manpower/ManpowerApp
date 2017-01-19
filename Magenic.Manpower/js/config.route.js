@@ -17,23 +17,29 @@
                         templateUrl: '/modules/login/login-tmpl.html',
                         controller: 'LoginController',
                         controllerAs: 'vm'
-                    });
-
-                $stateProvider.state('requestForm',
-                {
-                    url: '/requestForm',
-                    templateUrl: '/modules/requestForm/requestForm-tmpl.html',
-                    controller: 'RequestFormController',
-                    controllerAs: 'vm'
-                });
-
-                // Roles and Permission (a.k.a. user access)
-                $stateProvider.state('useraccess',
+                    })
+                    .state('requestForm',
                     {
-                        url: '/useraccess',
+                        url: '/requestForm',
+                        templateUrl: '/modules/requestForm/requestForm-tmpl.html',
+                        controller: 'RequestFormController',
+                        controllerAs: 'vm'
+                    })
+
+                    // Roles and Permission (a.k.a. user access)
+                    .state('userAccess',
+                    {
+                        url: '/userAccess',
                         templateUrl: '/modules/userAccess/userAccess-tmpl.html',
                         controller: 'UserAccessCtrl',
                         controllerAs: 'vm'
+                        //views: {
+                            
+                        //    'main': {
+                               
+                        //    }
+                        //}
+                        
                     });
             }
         ]);
