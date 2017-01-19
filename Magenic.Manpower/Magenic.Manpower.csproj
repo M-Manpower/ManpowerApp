@@ -76,8 +76,10 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
+    <Content Include="js\mp-constants.js" />
     <Content Include="modules\dashboard\layoutFooter.js" />
     <Content Include="modules\dashboard\layoutHeader.js" />
+    <Content Include="modules\login\login-svc.js" />
     <Content Include="modules\primarySkills\primarySkillsList.component.js" />
     <Content Include="modules\primarySkills\primarySkillsList-tpl.html" />
     <Content Include="modules\requestForm\requestForm-mdl.js" />

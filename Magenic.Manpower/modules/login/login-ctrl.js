@@ -2,7 +2,13 @@
     'use strict';
 
     angular.module('loginApp')
-    .controller('LoginController', ['$scope', function ($scope) {
+    .controller('LoginController', ['$scope', 'loginSvc', LoginController])
+        
+    function LoginController($scope, loginSvc) {
+
         this.title = "Manpower Request App";
-    }]);
+        this.submit = function () {
+            loginSvc.submit();
+        }
+    }
 })();
