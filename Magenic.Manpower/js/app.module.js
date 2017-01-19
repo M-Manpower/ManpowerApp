@@ -1,5 +1,5 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('manpowerApp', ['ui.router']);
+    angular.module('manpowerApp', ['ui.router', 'loginApp', 'userModule']);
 })();

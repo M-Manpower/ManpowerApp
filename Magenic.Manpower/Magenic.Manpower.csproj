@@ -71,6 +71,8 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Index.html" />
+    <Content Include="js\angular-route.js" />
+    <Content Include="js\angular-route.min.js" />
     <Content Include="js\app.module.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -83,6 +85,9 @@
     <Content Include="modules\login\login-ctrl.js" />
     <Content Include="modules\technologies\TechController.js" />
     <Content Include="modules\technologies\techDetails.html" />
+    <Content Include="modules\user\user-mdl.js" />
+    <Content Include="modules\user\user.html" />
+    <Content Include="modules\user\UserController.js" />
     <Content Include="packages.config" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular-ui-router.min.js" />
@@ -106,7 +111,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

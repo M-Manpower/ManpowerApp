@@ -2,7 +2,7 @@
 <html ng-app="manpowerApp">
 <head>
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
 
@@ -10,18 +10,23 @@
     <script type="text/javascript" src="/js/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="/js/app.module.js"></script>
     <script type="text/javascript" src="/js/config.route.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/modules/login/LoginController.js"></script>
+    <script type="text/javascript" src="/modules/login/login-mdl.js"></script>
+    <script type="text/javascript" src="/modules/login/login-ctrl.js"></script>
     <script type="text/javascript" src="/modules/dashboard/layoutHeader.js"></script>
     <script type="text/javascript" src="/modules/dashboard/layoutFooter.js"></script>
+    <script type="text/javascript" src="/modules/user/user-mdl.js"></script>
     <script type="text/javascript" src="/modules/user/UserController.js"></script>
+   
+
 </head>
 <body>
-    <layout-header></layout-header>
+    <a ui-sref="login">Login</a>
+    <!--<layout-header></layout-header>-->
     <div id="container">
-       <ui-view></ui-view>
+        <ui-view></ui-view>
     </div>
-    <layout-footer></layout-footer>
+    <!--<layout-footer></layout-footer>-->
 </body>
 </html>
-
