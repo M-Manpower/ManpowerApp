@@ -245,4 +245,4 @@ ModelManifest.xml
 .fake/
 
 # applicationhost
-/.vs/config/applicationhost.config
+.vs/config/applicationhost.config
