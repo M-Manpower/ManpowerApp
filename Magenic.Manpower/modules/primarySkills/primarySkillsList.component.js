@@ -4,7 +4,7 @@
     
     const primarySkillListComponent = {
         bindings: {},
-        templateUrl: 'modules/primarySkills/primarySkillsList-tpl.html',
+        templateUrl: 'modules/primarySkills/primarySkillsList.component-tmpl.html',
         controller: ['_', function (_) {
 
             this.isAllSkillsSelected = false;
