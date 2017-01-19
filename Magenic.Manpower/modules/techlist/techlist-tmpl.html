@@ -1,0 +1,8 @@
+﻿<table border=5 style="border:2px solid black;" cellspacing ="5" cellpadding="5">
+    <tr><td>Name</td><td>Description</td><td>Active</td></tr>
+    <tr ng-repeat="tech in tl.list">
+        <td>{{tech.name}}</td>
+         <td>{{tech.desc}}</td>
+         <td><span class="glyphicon {{tech.active}}"></span></td>
+    </tr>
+</table>

@@ -17,5 +17,13 @@
                 controller: 'LoginController',
                 controllerAs: 'vm'
             })
+            .state('techlist',
+            {
+                url: '/techlist',
+                templateUrl: '/modules/techlist/techlist-tmpl.html',
+                controller: 'techlistCtrl',
+                controllerAs: 'tl'
+            })
+            
     }])
 })();

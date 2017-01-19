@@ -76,6 +76,9 @@
     <Content Include="modules\dashboard\layoutFooter.js" />
     <Content Include="modules\dashboard\layoutHeader.js" />
     <Content Include="modules\login\LoginController.js" />
+    <Content Include="modules\techlist\techlist-ctrl.js" />
+    <Content Include="modules\techlist\techlist-svc.js" />
+    <Content Include="modules\techlist\techlist-tmpl.html" />
     <Content Include="packages.config" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular-ui-router.min.js" />
