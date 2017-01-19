@@ -89,10 +89,13 @@
     <Content Include="modules\login\login-ctrl.js" />
     <Content Include="modules\technologies\TechController.js" />
     <Content Include="modules\technologies\techDetails.html" />
-    <Content Include="modules\userAccess\userAccess-ctrl.js" />
-    <Content Include="modules\userAccess\userAccess-mdl.js" />
-    <Content Include="modules\userAccess\userAccess-svc.js" />
-    <Content Include="modules\userAccess\userAccess-tmpl.html" />
+    <Content Include="modules\userAccess\scripts\userAccess-ctrl.js" />
+    <Content Include="modules\userAccess\scripts\userAccess-dir.js" />
+    <Content Include="modules\userAccess\scripts\userAccess-mdl.js" />
+    <Content Include="modules\userAccess\scripts\userAccess-svc.js" />
+    <Content Include="modules\userAccess\views\addUpdate-tmpl.html" />
+    <Content Include="modules\userAccess\views\userAccess-tmpl.html" />
+    <Content Include="modules\userAccess\views\userAccessList-tmpl.html" />
     <Content Include="packages.config" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular-ui-router.min.js" />

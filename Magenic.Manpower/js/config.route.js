@@ -34,7 +34,7 @@
                     .state('userAccess',
                     {
                         url: '/userAccess',
-                        templateUrl: '/modules/userAccess/userAccess-tmpl.html',
+                        templateUrl: '/modules/userAccess/views/userAccess-tmpl.html',
                         controller: 'UserAccessCtrl',
                         controllerAs: 'vm'
                         //views: {

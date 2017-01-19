@@ -21,14 +21,20 @@
     <script type="text/javascript" src="/modules/dashboard/layoutFooter.js"></script>
     
     <!-- Roles and Permission -->
-    <script type="text/javascript" src="/modules/userAccess/userAccess-ctrl.js"></script>
-    <script type="text/javascript" src="/modules/userAccess/userAccess-svc.js"></script>
+    <script type="text/javascript" src="/modules/userAccess/scripts/userAccess-ctrl.js"></script>
+    <script type="text/javascript" src="/modules/userAccess/scripts/userAccess-svc.js"></script>
     
 
 </head>
 <body>
+    <style>
+        html {
+            padding: 10px;
+        }
+    </style>
     <a ui-sref="login">Login</a> |
-    <a ui-sref="primarySkills">primary skills</a>
+    <a ui-sref="primarySkills">primary skills</a> |
+    <a ui-sref="userAccess">Roles and Permission</a>
 
     <!--<layout-header></layout-header>-->
     <div id="container">
