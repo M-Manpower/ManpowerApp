@@ -1,0 +1,20 @@
+﻿<form name="userForm" ng-submit="userCtrl.addUser()" novalidate>
+    <div>
+        <label>First Name:</label>
+        <input type="text" ng-model="userCtrl.model.firstName" />
+    </div>
+    <div>
+        <label>Last Name:</label>
+        <input type="text" ng-model="userCtrl.model.lastName" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" ng-model="userCtrl.model.email" />
+    </div>
+    <div>
+        <label>Contact No.:</label>
+        <input type="text" ng-model="userCtrl.model.contactNumber" />
+    </div>
+    <input type="submit" title="Create User"/>
+</form>
+

@@ -20,7 +20,7 @@
           .state('adduser',
             {
                 url: '/user/add',
-                templateUrl: '/modules/user/user.html',
+                templateUrl: '/modules/user/user-tmpl.html',
                 controller: 'UserController',
                 controllerAs: 'userCtrl'
             })

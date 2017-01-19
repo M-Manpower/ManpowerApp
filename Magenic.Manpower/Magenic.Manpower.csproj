@@ -86,8 +86,8 @@
     <Content Include="modules\technologies\TechController.js" />
     <Content Include="modules\technologies\techDetails.html" />
     <Content Include="modules\user\user-mdl.js" />
-    <Content Include="modules\user\user.html" />
-    <Content Include="modules\user\UserController.js" />
+    <Content Include="modules\user\user-tmpl.html" />
+    <Content Include="modules\user\user-ctrl.js" />
     <Content Include="packages.config" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular-ui-router.min.js" />
