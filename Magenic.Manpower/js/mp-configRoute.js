@@ -1,8 +1,8 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('manpowerApp')
-    .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
+    var app = angular.module('manpowerApp');
+    app.config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise('/','/login');
 
         $stateProvider
@@ -29,4 +29,15 @@
                 controllerAs: 'vm'
             })
     }])
+
+    app.config(function ($httpProvider) {
+        $httpProvider.defaults.transformRequest = function (data) {
+            if (data === undefined) {
+                return data;
+            }
+            return $.param(data);
+        };
+
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/json; charset=UTF-8';
+    });
 })();

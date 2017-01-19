@@ -1,38 +1,28 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('loginApp')
-    .factory('loginSvc', ['$http', '$templateCache', 'appSettings', loginSvc])
+    angular
+        .module('loginApp')
+        .factory('LoginService', LoginService)
 
-    function loginSvc($http, $templateCache, appSettings) {
+    LoginService.$inject = ['$timeout','$http', 'appSettings'];
 
-        var submit = function () {
-            //var value = {
-            //    username: 'jonnaa@magenic.com',
-            //    password: 'test123'
-            //};
+    function LoginService($timeout, $http, appSettings) {
+        var service = {};
+        service.Login = Login;
+        return service;
 
-            $http({
-                method: 'POST',
-                url: appSettings.serverPath + 'api/login',
-                data: { data: "test" },
-                dataType: 'json',
-                headers: { contentType: "application/json;"}
+        function Login(username, password) {
+            $timeout(function () {
+                GetByUsername(username)
+                .then(function () { });
             });
-
-            //$http.post(appSettings.serverPath + 'api/login', "test")
-            //    .then(function (data, status, headers, config) {
-            //        console.log("IN SAVE WORK - SUCCESS");
-            //        console.log(status);
-            //    })
-            //    .catch(function () {
-            //        console.log("ERROR IN SAVE WORK!");
-            //    })
         }
 
-        return {
-            'submit': submit
-        };
+        //api
+        function GetByUsername(username) {
+            return $http.get(appSettings.serverPath + 'api/login/' + username);
+        }
     }
 
 })();

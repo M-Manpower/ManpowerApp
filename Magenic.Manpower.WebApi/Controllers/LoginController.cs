@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
+using Newtonsoft.Json.Linq;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Magenic.Manpower.WebApi.Controllers
 {
+    [EnableCors("CorsPolicy")]
     [Route("api/[controller]")]
     public class LoginController : Controller
     {
@@ -19,21 +22,21 @@ namespace Magenic.Manpower.WebApi.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{username}")]
+        public string Get(string username)
         {
             return "value";
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string data)
+        public void Post([FromBody]JObject value)
         {
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string data)
+        public void Put(int id, [FromBody]string value)
         {
         }
 

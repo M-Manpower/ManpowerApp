@@ -1,14 +1,20 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('loginApp')
-    .controller('LoginController', ['$scope', 'loginSvc', LoginController])
-        
-    function LoginController($scope, loginSvc) {
+    angular
+        .module('loginApp')
+        .controller('LoginController', LoginController)
+    
+    LoginController.$inject = ['$scope', 'LoginService'];
 
-        this.title = "Manpower Request App";
-        this.submit = function () {
-            loginSvc.submit();
+    function LoginController($scope, LoginService) {
+        var vm = this;
+        vm.title = "Manpower Request App";
+        vm.login = login;
+
+        function login() {
+            vm.dataLoading = true;
+            LoginService.Login(vm.username, vm.password);
         }
     }
 })();
