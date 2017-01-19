@@ -74,9 +74,13 @@
     <Content Include="js\app.module.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
-    <Content Include="modules\role\roles-ctrl.js" />
-    <Content Include="modules\role\roles-svc.js" />
-    <Content Include="modules\role\roles-tmpl.html" />
+    <Content Include="js\underscore.js" />
+    <Content Include="modules\roles\rolesList.html" />
+    <Content Include="modules\roles\rolesList.js" />
+    <Content Include="modules\roles\roles-ctrl.js" />
+    <Content Include="modules\roles\roles-mdl.js" />
+    <Content Include="modules\roles\roles-svc.js" />
+    <Content Include="modules\roles\roles-mdl-tmpl.html" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="modules\dashboard\layoutFooter.js" />

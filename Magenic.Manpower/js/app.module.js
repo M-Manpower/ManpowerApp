@@ -1,9 +1,10 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('manpowerApp',
-        ['loginApp',
+    angular.module('manpowerApp', [
+        'loginApp',
+        'rolesModule',
         'requestFormApp',
         'ui.router'
-        ]);
+    ]);
 })();

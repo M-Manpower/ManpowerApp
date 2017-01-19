@@ -1,6 +1,7 @@
 (function () {
     'use strict';
-    angular.module('manpowerApp')
+
+    angular.module('rolesModule')
         .controller('rolesCtrl', function (rolesSvc) {
             this.nameFilter = null;
             this.list = [];
