@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Magenic.Manpower.EFCore.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Magenic.Manpower.WebApi
 {
@@ -31,7 +33,10 @@ namespace Magenic.Manpower.WebApi
             services.AddMvc().AddJsonOptions(jsonOptions =>
             {
                 jsonOptions.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
-            }); ;
+            });
+
+            services.AddDbContext<MagenicManpowerDBContext>(options =>
+             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
