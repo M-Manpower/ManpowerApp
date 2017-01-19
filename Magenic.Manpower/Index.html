@@ -19,15 +19,19 @@
     <script type="text/javascript" src="/modules/login/login-ctrl.js"></script>
     <script type="text/javascript" src="/modules/dashboard/layoutHeader.js"></script>
     <script type="text/javascript" src="/modules/dashboard/layoutFooter.js"></script>
-    
+
+    <script src="modules/primarySkills/primarySkillsList.component.js"></script>
 </head>
 <body>
-    <a ui-sref="login">Login</a>
+    <a ui-sref="login">Login</a> |
+    <a ui-sref="primarySkills">primary skills</a>
+
     <!--<layout-header></layout-header>-->
     <div id="container">
        <ui-view></ui-view>
     </div>
     <!--<layout-footer></layout-footer>-->
+       
 </body>
 </html>
 
