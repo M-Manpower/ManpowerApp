@@ -1,9 +1,9 @@
 ﻿(function () {
-  'use strict';
+    'use strict';
 
     angular.module('manpowerApp')
     .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
-        $urlRouterProvider.otherwise('/','/login','/roles');
+        $urlRouterProvider.otherwise('/', '/login', '/roles');
 
         $stateProvider
             .state('home',
@@ -19,11 +19,15 @@
             })
             .state('roles',
               {
-                url: '/roles',
-                templateUrl: '/modules/role/roles-tmpl.html',
-                controller: 'rolesCtrl',
-                controllerAs: 'vm'
+                  url: '/roles',
+                  templateUrl: '/modules/role/roles-tmpl.html',
+                  controller: 'rolesCtrl',
+                  controllerAs: 'vm'
               })
+            .state('primarySkills', {
+                url: '/primaryskills',
+                templateUrl: '/templates/primarySkills-tpl.html'
+            })
             .state('requestForm',
             {
                 url: '/requestForm',
