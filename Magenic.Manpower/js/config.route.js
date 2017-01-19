@@ -29,7 +29,7 @@
                 url: '/techDetails/:techId',
                 templateUrl: '/modules/technologies/techDetails-tmpl.html',
                 controller: 'TechDetailsController',
-                controllerAs: 'tech'
+                controllerAs: 'vm'
             })
     }])
 })();
