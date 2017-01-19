@@ -4,7 +4,8 @@
   <title></title>
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+  <link href="css/site.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 
   <script type="text/javascript" src="/js/angular.min.js"></script>
   <script type="text/javascript" src="/js/angular-ui-router.min.js"></script>
@@ -28,15 +29,37 @@
   <script src="modules/roles/roles-svc.js"></script>
 </head>
 <body>
-  <a ui-sref="login">Login</a> |
-  <a ui-sref="primarySkills">primary skills</a>
-
-  <!--<layout-header></layout-header>-->
-  <div id="container">
-    <ui-view></ui-view>
+  <div class="navbar navbar-inverse navbar-fixed-top tdt-header">
+    <div class="tdt-brand">
+      <div class="container">
+        <img class="tdt-magenic-logo" src="/images/W_MagenicLogo.png" /> <div class="tdt-manila">MANILA</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/home" class="navbar-brand"><span class="glyphicon glyphicon-user"></span> Manpower App</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a>Ann Penus</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <!--<layout-footer></layout-footer>-->
+
+  <div class="container body-content">
+    <ui-view></ui-view>
+    <hr />
+    <footer>
+      <p class="pull-right">&copy; 2016 - Magenic Manila, Inc.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
-

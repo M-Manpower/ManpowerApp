@@ -70,6 +70,10 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\site.css" />
+    <Content Include="css\style.css" />
+    <Content Include="images\magenic_weavetexture_50.png" />
+    <Content Include="images\W_MagenicLogo.png" />
     <Content Include="Index.html" />
     <Content Include="js\app.module.js" />
     <Content Include="js\bootstrap.js" />
