@@ -24,11 +24,11 @@ namespace Magenic.Manpower.EFCore.Models
         {
             //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
             //var connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnecionString"].ConnectionString;
-            var config = new ConfigurationBuilder()
-            .SetBasePath(System.IO.Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json")
-            .Build();
-            optionsBuilder.UseSqlServer(config.GetConnectionString("MagenicManpowerDB"));
+            //var config = new ConfigurationBuilder()
+            //.SetBasePath(System.IO.Directory.GetCurrentDirectory())
+            //.AddJsonFile("appsettings.json")
+            //.Build();
+            //optionsBuilder.UseSqlServer(config.GetConnectionString("MagenicManpowerDB"));
             //optionsBuilder.UseSqlServer(@"Server=ROLANDJ-PC1\MSSQLSERVER2016;Database=MagenicManpowerDB;Trusted_Connection=True;");
         }
 
