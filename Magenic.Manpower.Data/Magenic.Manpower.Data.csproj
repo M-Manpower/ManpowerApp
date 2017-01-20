@@ -91,9 +91,6 @@
     <Compile Include="Status.cs">
       <DependentUpon>MagenicManpower.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>MagenicManpower.tt</DependentUpon>
-    </Compile>
     <Compile Include="Technology.cs">
       <DependentUpon>MagenicManpower.tt</DependentUpon>
     </Compile>

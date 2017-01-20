@@ -1,0 +1,11 @@
+﻿<div ng-controller="TechController">
+    <p><h1>Create Technology</h1></p>
+    <form name="techForm">
+        <label for="techName">Name:</label> &nbsp;<input id="techName" type="text" ng-model="tech.name" placeholder="Please enter name..." required /><br />
+        <label for="techDescription">Brief Description:</label>&nbsp;<textarea id="techDescription" ng-model="tech.description" placeholder="Please enter description..."></textarea>
+        <p>
+            <button type="submit" ng-disabled="techForm.$invalid" ng-click="saveTech(tech, techForm);">Submit</button>
+            <button type="button" ng-click="cancelTech();">Cancel</button>
+        </p>
+    </form>
+</div>

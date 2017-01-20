@@ -2,11 +2,13 @@
     [Id]          INT            IDENTITY (1, 1) NOT NULL,
     [Name]        NVARCHAR (100) NOT NULL,
     [Description] NVARCHAR (MAX) NULL,
-    [DateCreated] DATETIME       NULL,
-    [DateUpdated] DATETIME       NOT NULL,
+    [DateCreated] DATETIME       NOT NULL,
+    [DateUpdated] DATETIME       NULL,
     [IsActive]    BIT            NOT NULL,
     CONSTRAINT [PK_PrimarySkill] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
 
 
 

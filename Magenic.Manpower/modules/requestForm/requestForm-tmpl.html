@@ -1,0 +1,50 @@
+﻿<link rel="stylesheet" href="modules/requestForm/requestForm.css" type="text/css" />
+<div class="col-md-3 container">
+    <ng-form name="requestForm">
+        <div class="form-group fieldContainer">
+            <label for="projectName">Project name:</label>
+            <input class="form-control" id="projectName" type="text" ng-model="vm.projectName"/>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Primary skill:</label>
+            <div class="radio" ng-repeat="primarySkill in vm.primarySkills">
+                <label><input type="radio" name="primarySkill" ng-model="vm.primarySkill" ng-value="{{primarySkill}}" />{{primarySkill.Name}}</label>
+            </div>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Region:</label>
+            <select class="form-control" ng-model="vm.region" ng-options="x.Name for x in vm.regions"></select>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Desired applicant level:</label>
+            <select class="form-control" ng-model="vm.applicantLevel" ng-options="x.Name for x in vm.levels"></select>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Estimated # of hires:</label>
+            <input class="form-control" type="text" ng-model="vm.numberOfHires"/>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Projected start date:</label>
+            <input class="form-control" type="text" ng-model="vm.startDate"/>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Job description:</label>
+            <input class="form-control" type="text" ng-model="vm.jobDescription"/>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Primary technologies needed:</label>
+            <div class="radio" ng-repeat="tech in vm.primaryTechnologies">
+                <label><input type="radio" name="primaryTechnologies" ng-model="vm.primaryTechnology" ng-value="{{tech}}" />{{tech.Name}}</label>
+            </div>
+        </div>
+        <div class="form-group fieldContainer">
+            <label>Reason of request:</label>
+            <div class="radio" ng-repeat="reasonOfRequest in vm.reasonsOfRequest">
+                <label><input type="radio" name="reasonOfRequest" ng-model="vm.reasonOfRequest" ng-value="{{reasonOfRequest}}" ng-click="vm.submit()" />{{reasonOfRequest.Name}}</label>
+            </div>
+        </div>
+        <div class="form-group fieldContainer">
+            <button type="submit" ng-click="vm.submit()">Submit</button>
+        </div>
+    </ng-form>
+</div>

@@ -7,22 +7,38 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
 
     <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/underscore.min.js"></script>
+    <script type="text/javascript" src="/js/angular-underscore.js"></script>
     <script type="text/javascript" src="/js/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="/js/app.module.js"></script>
-    <script type="text/javascript" src="/js/config.route.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/modules/login/LoginController.js"></script>
+    <script type="text/javascript" src="/js/mp-module.js"></script>
+    <script type="text/javascript" src="/js/mp-configRoute.js"></script>
+    <script type="text/javascript" src="/js/mp-constants.js"></script>
+    <script type="text/javascript" src="/js/mp-xhr.js"></script>
+    <script type="text/javascript" src="/modules/requestForm/requestForm-mdl.js"></script>
+    <script type="text/javascript" src="/modules/requestForm/requestForm-ctrl.js"></script>
+    <script type="text/javascript" src="/modules/requestForm/requestForm-svc.js"></script>
+    <script type="text/javascript" src="/modules/login/login-mdl.js"></script>
+    <script type="text/javascript" src="/modules/login/login-context.js"></script>
+    <script type="text/javascript" src="/modules/login/login-svc.js"></script>
+    <script type="text/javascript" src="/modules/login/login-ctrl.js"></script>
     <script type="text/javascript" src="/modules/dashboard/layoutHeader.js"></script>
     <script type="text/javascript" src="/modules/dashboard/layoutFooter.js"></script>
     <script type="text/javascript" src="/modules/techlist/techlist-ctrl.js"></script>
     <script type="text/javascript" src="/modules/techlist/techlist-svc.js"></script>
 </head>
 <body>
-    <layout-header></layout-header>
+    <a ui-sref="login">Login</a> |
+    <a ui-sref="primarySkills">primary skills</a> |
+    <a ui-sref="requestForm">Request Form</a>
+
+    <!--<layout-header></layout-header>-->
     <div id="container">
        <ui-view></ui-view>
     </div>
-    <layout-footer></layout-footer>
+    <!--<layout-footer></layout-footer>-->
+       
 </body>
 </html>
 

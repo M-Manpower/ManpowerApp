@@ -1,9 +1,11 @@
 ﻿CREATE TABLE [dbo].[Permission] (
-    [Id]          INT            NOT NULL,
-    [Name]        NVARCHAR (50)  NULL,
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+    [Name]        NVARCHAR (50)  NOT NULL,
     [Description] NVARCHAR (MAX) NULL,
     CONSTRAINT [PK_Permission] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
 
 
 
