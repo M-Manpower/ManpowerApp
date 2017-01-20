@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using Magenic.Manpower.EFCore.Models;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.Swagger.Model;
+using Magenic.Manpower.WebApi.ServiceLogic;
+using Magenic.Manpower.WebApi.Services.Repository;
 
 namespace Magenic.Manpower.WebApi
 {
@@ -50,8 +52,9 @@ namespace Magenic.Manpower.WebApi
                 jsonOptions.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
 
+            var connstring = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<MagenicManpowerDBContext>(options =>
-             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+             options.UseSqlServer(connstring));
 
             services.AddSwaggerGen();
             services.ConfigureSwaggerGen(options =>
@@ -66,6 +69,11 @@ namespace Magenic.Manpower.WebApi
                 });
                 options.IncludeXmlComments(swaggerCommentXmlPath); //Includes XML comment file
             });
+
+            //Domain Specific
+            services.AddSingleton<IAuthenticationSvc, AuthenticationCustomSvc>();
+            services.AddTransient<IUserContextRepository, UserContextRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

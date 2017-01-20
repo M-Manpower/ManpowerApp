@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using Newtonsoft.Json.Linq;
+using Microsoft.Extensions.DependencyInjection;
+using Magenic.Manpower.WebApi.ServiceLogic;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,8 +14,13 @@ namespace Magenic.Manpower.WebApi.Controllers
 {
     [EnableCors("CorsPolicy")]
     [Route("api/[controller]")]
-    public class LoginController : Controller
+    public class LoginController : BaseController
     {
+        private readonly IAuthenticationSvc _authenticationSvc;
+        public LoginController(IServiceProvider container) : base(container)
+        {
+            _authenticationSvc = container.GetService<IAuthenticationSvc>();
+        }
         /// <summary>
         /// This method is use to test the web api
         /// </summary>
@@ -41,6 +48,8 @@ namespace Magenic.Manpower.WebApi.Controllers
         [HttpPost]
         public void Post([FromBody]JObject value)
         {
+            var result = _authenticationSvc.Authenticate("admin@magenic.com", "admadm12345");
+            return;
         }
 
         // PUT api/values/5
