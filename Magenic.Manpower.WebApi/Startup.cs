@@ -38,6 +38,8 @@ namespace Magenic.Manpower.WebApi
 
             services.AddDbContext<MagenicManpowerDBContext>(options =>
              options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +49,8 @@ namespace Magenic.Manpower.WebApi
             loggerFactory.AddDebug();
             app.UseCors("CorsPolicy");
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUi();
         }
     }
 }
