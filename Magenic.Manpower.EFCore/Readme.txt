@@ -1,2 +1,2 @@
 ﻿//use the text below to generate context and entities
-Scaffold-DbContext "Server=<YOUR SERVER>;Database=MagenicManpowerRecruitment;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "Server=<YOUR SERVER>;Database=MagenicManpowerDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
