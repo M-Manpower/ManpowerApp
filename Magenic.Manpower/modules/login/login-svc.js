@@ -5,24 +5,26 @@
         .module('loginApp')
         .factory('LoginService', LoginService)
 
-    LoginService.$inject = ['$timeout','$http', 'appSettings'];
+    LoginService.$inject = ['$timeout', '$http', 'LoginContext'];
 
-    function LoginService($timeout, $http, appSettings) {
-        var service = {};
-        service.Login = Login;
-        return service;
+    function LoginService($timeout, $http, LoginContext) {
+        return {
+            Login: Login,
+            Register: RegisterUser
+        };
 
         function Login(username, password) {
             $timeout(function () {
-                GetByUsername(username)
+                LoginContext.GetByUsername(username)
                 .then(function () { });
             });
         }
 
-        //api
-        function GetByUsername(username) {
-            return $http.get(appSettings.serverPath + 'api/login/' + username);
+        function RegisterUser(info)
+        {
+            LoginContext.RegisterUser(info);
         }
+
     }
 
 })();
