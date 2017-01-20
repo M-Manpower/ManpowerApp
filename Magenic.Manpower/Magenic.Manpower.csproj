@@ -85,6 +85,7 @@
     <Content Include="js\lodash.js" />
     <Content Include="modules\dashboard\layoutFooter.js" />
     <Content Include="modules\dashboard\layoutHeader.js" />
+    <Content Include="modules\primarySkills\primarySkills-svc.js" />
     <Content Include="modules\primarySkills\primarySkillsList.component.js" />
     <Content Include="modules\primarySkills\primarySkillsList.component-tmpl.html" />
     <Content Include="modules\requestForm\requestForm-mdl.js" />

@@ -3,21 +3,21 @@
 
 
     const primarySkillListComponent = {
-        bindings: {},
+        bindings: { },
         templateUrl: 'modules/primarySkills/primarySkillsList.component-tmpl.html',
-        controller: ['$scope','_', 'filterFilter', primarySkillListController]
+        controller: ['_', 'filterFilter', primarySkillListController]
     };
 
-
-    function primarySkillListController($scope, _, filterFilter) {
+    function primarySkillListController(_, filterFilter) {
         
         var ctrl = this;
         
         this.filter = "";        
         this.isAllSkillsSelected = false;
                
+        this.primarySkillsOriginalState = [];
         this.primarySkills = [];
-
+        
         this.$onInit = function () {
             
             this.primarySkills = [
@@ -29,13 +29,13 @@
             ];
 
             this.pager = {
-                pageSize: 3,
+                pageSize: 20,
                 totalItems: this.primarySkills.length,
                 currentPage: 1              
             };
 
             this.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
-
+     
         };  
 
         this.$onChanges = function (changes) {
@@ -72,9 +72,7 @@
             });
 
         };
-
        
-
     };
 
     angular.module('manpowerApp')           
