@@ -45,6 +45,7 @@
         this.filterChange = function () {
             this.filtered = filterFilter(this.primarySkills, this.filter);
             
+            //Re-calculate pager
             this.pager['totalItems'] = this.filtered.length;
             this.pager['currentPage'] = 1;                        
             this.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
@@ -76,16 +77,7 @@
 
     };
 
-    angular.module('manpowerApp')
-           .filter('startFrom', function () {
-                return function (input, start) {
-                    if (input) {
-                        start = +start;
-                        return input.slice(start);
-                    }
-                    return [];
-                };
-          })
+    angular.module('manpowerApp')           
           .component('primarySkillsList', primarySkillListComponent);    
 
 })();

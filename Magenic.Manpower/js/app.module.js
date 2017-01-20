@@ -6,5 +6,15 @@
         'requestFormApp',
         'ui.router',
         'ui.bootstrap'
-        ]).constant('_', window._);
+        ])
+        .filter('startFrom', function () {
+            return function (input, start) {
+                if (input) {
+                    start = +start;
+                    return input.slice(start);
+                }
+                return [];
+            };
+        })
+        .constant('_', window._);
 })();
