@@ -5,6 +5,7 @@
         ['loginApp',
         'requestFormApp',
         'techDetailsApp',
-        'ui.router'
+        'ui.router',
+        'underscore'
         ]);
 })();

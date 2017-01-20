@@ -90,6 +90,7 @@
     <Content Include="modules\login\login.css" />
     <Content Include="modules\login\login-mdl.js" />
     <Content Include="modules\login\login-ctrl.js" />
+    <Content Include="modules\requestForm\requestForm.css" />
     <Content Include="modules\technologies\techDetails-ctrl.js" />
     <Content Include="modules\technologies\techDetails-mdl.js" />
     <Content Include="modules\technologies\techDetails-svc.js" />
