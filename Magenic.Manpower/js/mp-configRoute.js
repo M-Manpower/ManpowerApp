@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('manpowerApp')
-    .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
-        $urlRouterProvider.otherwise('/', '/login');
+    var app = angular.module('manpowerApp');
+    app.config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
+        $urlRouterProvider.otherwise('/','/login');
 
         $stateProvider
             .state('home',
@@ -16,6 +16,10 @@
                 templateUrl: '/modules/login/login-tmpl.html',
                 controller: 'LoginController',
                 controllerAs: 'vm'
+            })
+            .state('primarySkills', {
+                url: '/primaryskills',
+                templateUrl: '/templates/primarySkills-tpl.html'
             })
             .state('requestForm',
             {
@@ -32,4 +36,15 @@
                 controllerAs: 'vm'
             })
     }])
+
+    //app.config(function ($httpProvider) {
+    //    $httpProvider.defaults.transformRequest = function (data) {
+    //        if (data === undefined) {
+    //            return data;
+    //        }
+    //        return $.param(data);
+    //    };
+
+    //    $httpProvider.defaults.headers.post['Content-Type'] = 'application/json; charset=UTF-8';
+    //});
 })();
