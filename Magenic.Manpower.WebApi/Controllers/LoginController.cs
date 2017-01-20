@@ -14,6 +14,10 @@ namespace Magenic.Manpower.WebApi.Controllers
     [Route("api/[controller]")]
     public class LoginController : Controller
     {
+        /// <summary>
+        /// This method is use to test the web api
+        /// </summary>
+        /// <returns></returns>
         // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -21,6 +25,11 @@ namespace Magenic.Manpower.WebApi.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        /// <summary>
+        /// This is a test method
+        /// </summary>
+        /// <param name="username">username of the user</param>
+        /// <returns></returns>
         // GET api/values/5
         [HttpGet("{username}")]
         public string Get(string username)
