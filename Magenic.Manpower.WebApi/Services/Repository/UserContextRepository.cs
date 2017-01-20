@@ -7,25 +7,15 @@ using Magenic.Manpower.EFCore.Models;
 
 namespace Magenic.Manpower.WebApi.Services.Repository
 {
-    public class UserContextRepository : IUserContextRepository
-    {
-        private MagenicManpowerDBContext _dbContext;
-        public UserContextRepository(MagenicManpowerDBContext dbContext)
-        {
-            _dbContext = dbContext;
+    public class UserContextRepository : BaseRepository, IUserContextRepository
+    {        
+        public UserContextRepository(MagenicManpowerDBContext dbContext):base(dbContext)
+        {            
         }
 
         public User GetByUsernameAndPwd(string username, string password)
         {
             return _dbContext.User.FirstOrDefault(u => u.Email.ToLower() == username.ToLower() && u.Password == password);
-            //return new User
-            //{
-            //    Email = "admin@magenic.com",
-            //    Firstname = "Admin",
-            //    Lastname = "Admin",
-            //    ContactNo = null,
-            //    RoleId = 1
-            //};
         }
     }
 }

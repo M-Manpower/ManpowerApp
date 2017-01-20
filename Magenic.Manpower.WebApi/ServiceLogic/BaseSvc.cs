@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
-namespace Magenic.Manpower.WebApi.Controllers
+namespace Magenic.Manpower.WebApi.ServiceLogic
 {
-    public class BaseController:Controller
+    public class BaseSvc
     {
         protected readonly IServiceProvider _container;
-        public BaseController(IServiceProvider container)
+        public BaseSvc(IServiceProvider container)
         {
             _container = container;
         }

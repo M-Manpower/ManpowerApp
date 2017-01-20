@@ -8,10 +8,10 @@ using Magenic.Manpower.WebApi.Services.Repository;
 
 namespace Magenic.Manpower.WebApi.ServiceLogic
 {
-    public class AuthenticationCustomSvc : IAuthenticationSvc
+    public class AuthenticationCustomSvc : BaseSvc, IAuthenticationSvc
     {
         private readonly IUserContextRepository _userContext;
-        public AuthenticationCustomSvc(IServiceProvider container)
+        public AuthenticationCustomSvc(IServiceProvider container):base(container)
         {
             _userContext = container.GetService<IUserContextRepository>();
         }
