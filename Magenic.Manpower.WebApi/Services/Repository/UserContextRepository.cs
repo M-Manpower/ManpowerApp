@@ -17,15 +17,15 @@ namespace Magenic.Manpower.WebApi.Services.Repository
 
         public User GetByUsernameAndPwd(string username, string password)
         {
-            //return _dbContext.User.FirstOrDefault(u => u.Email.ToLower() == username.ToLower() && u.Password == password);
-            return new User
-            {
-                Email = "admin@magenic.com",
-                Firstname = "Admin",
-                Lastname = "Admin",
-                ContactNo = null,
-                RoleId = 1
-            };
+            return _dbContext.User.FirstOrDefault(u => u.Email.ToLower() == username.ToLower() && u.Password == password);
+            //return new User
+            //{
+            //    Email = "admin@magenic.com",
+            //    Firstname = "Admin",
+            //    Lastname = "Admin",
+            //    ContactNo = null,
+            //    RoleId = 1
+            //};
         }
     }
 }

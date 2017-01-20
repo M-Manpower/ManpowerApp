@@ -52,9 +52,8 @@ namespace Magenic.Manpower.WebApi
                 jsonOptions.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             });
 
-            var connstring = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<MagenicManpowerDBContext>(options =>
-             options.UseSqlServer(connstring));
+             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSwaggerGen();
             services.ConfigureSwaggerGen(options =>
