@@ -89,6 +89,7 @@
     <Content Include="modules\login\login.css" />
     <Content Include="modules\login\login-mdl.js" />
     <Content Include="modules\login\login-ctrl.js" />
+    <Content Include="modules\requestForm\requestForm.css" />
     <Content Include="modules\technologies\TechController.js" />
     <Content Include="modules\technologies\techDetails.html" />
     <Content Include="packages.config" />
