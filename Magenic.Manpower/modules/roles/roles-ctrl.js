@@ -1,13 +1,14 @@
 (function () {
     'use strict';
 
-    angular.module('rolesModule')
-        .controller('rolesCtrl', function (rolesSvc) {
-            this.nameFilter = null;
-            this.list = [];
+    angular
+        .module('rolesModule')
+        .controller('rolesCtrl', rolesCtrl)
 
-            rolesSvc.get().then(function (response) {
-                this.list = response.data;
-            }.bind(this));
-        })
+    rolesCtrl.$inject = ['rolesSvc'];
+
+    function rolesCtrl(rolesSvc) {
+        this.nameFilter = null;
+    }
+
 })();

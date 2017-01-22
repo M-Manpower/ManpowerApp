@@ -40,21 +40,21 @@ label {
     color: #808080;
 }
 
-.tdt-header {
+.app-header {
     background-color: #79bd43;
     border-color: #79bd43;
 }
 
-    .tdt-header a {
+    .app-header a {
         color: white !important;
     }
 
-.tdt-brand {
+.app-brand {
     background-image: url('../images/magenic_weavetexture_50.png');
     background-repeat: repeat;
 }
 
-    .tdt-brand .tdt-manila {
+    .app-brand .app-manila {
         color: white;
         font-style: italic;
         font-size: 12pt;
@@ -63,7 +63,7 @@ label {
         margin-bottom: -2px;
     }
 
-.tdt-magenic-logo {
+.app-magenic-logo {
     height: 16px;
     margin-top: 8px;
     margin-bottom: 5px;

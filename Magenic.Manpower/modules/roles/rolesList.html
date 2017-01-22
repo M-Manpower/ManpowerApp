@@ -2,14 +2,12 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Description</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="role in $ctrl.list track by role.id">
       <td>{{role.name}}</td>
-      <td>{{role.description}}</td>
       <td>
         <button ng-click="$ctrl.view(role.id)">view</button>
         <button ng-show="role.active" ng-click="$ctrl.toggleActive(role.id, role.active)">deactivate</button>

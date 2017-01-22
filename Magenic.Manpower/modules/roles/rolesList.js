@@ -1,36 +1,41 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('rolesModule')
-         .component('rolesList', {
-             bindings: {
-                 list: '<'
-             },
-             templateUrl: 'modules/roles/rolesList.html',
-             controller: function (rolesSvc) {
-                 this.$onInit = function () {
-                     rolesSvc.get().then(function (response) {
-                         this.list = response.data;
-                     }.bind(this));
-                 };
+    angular
+    .module('rolesModule')
+    .component('rolesList', {
+        bindings: {
+            list: '<'
+        },
+        templateUrl: 'modules/roles/rolesList.html',
+        controller: rolesListCtrl
+    });
 
-                 this.$onChanges = function (changes) {
-                     //this.init();
-                     var s = '';
-                 };
+    rolesListCtrl.$inject = ['rolesSvc'];
 
-                 this.view = function (id) {
-                     alert('viewing -> ' + id);
-                 };
+    function rolesListCtrl(rolesSvc) {
+        this.$onInit = function () {
+            rolesSvc.get().then(function (response) {
+                this.list = response.data;
+            }.bind(this));
+        };
 
-                 this.toggleActive = function (id, isActive) {
-                     var item = findItem(id);
-                     item.active = !isActive;
-                 };
+        this.$onChanges = function (changes) {
+            //this.init();
+            var s = '';
+        };
 
-                 var findItem = function (id) {
-                    return _.find(this.list, function (role) { return role.id == id; });
-                 }.bind(this);
-             }
-         });
+        this.view = function (id) {
+            alert('viewing -> ' + id);
+        };
+
+        this.toggleActive = function (id, isActive) {
+            var item = findItem(id);
+            item.active = !isActive;
+        };
+
+        var findItem = function (id) {
+            return _.find(this.list, function (role) { return role.id == id; });
+        }.bind(this);
+    }
 })();
