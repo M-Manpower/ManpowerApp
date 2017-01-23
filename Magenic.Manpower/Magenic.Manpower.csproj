@@ -82,6 +82,10 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\side-menu.js" />
     <Content Include="js\underscore.js" />
+    <Content Include="modules\primarySkills\primarySkills-context.js" />
+    <Content Include="modules\primarySkills\primarySkills-svc.js" />
+    <Content Include="modules\primarySkills\primarySkills-tmpl.html" />
+    <Content Include="modules\primarySkills\primarySkillsList.component-tmpl.html" />
     <Content Include="modules\roles\rolesList.html" />
     <Content Include="modules\roles\rolesList.js" />
     <Content Include="modules\roles\roles-ctrl.js" />
@@ -95,7 +99,6 @@
     <Content Include="modules\login\login-context.js" />
     <Content Include="modules\login\login-svc.js" />
     <Content Include="modules\primarySkills\primarySkillsList.component.js" />
-    <Content Include="modules\primarySkills\primarySkillsList-tpl.html" />
     <Content Include="modules\requestForm\requestForm-mdl.js" />
     <Content Include="modules\requestForm\requestForm-svc.js" />
     <Content Include="modules\requestForm\requestForm-tmpl.html" />

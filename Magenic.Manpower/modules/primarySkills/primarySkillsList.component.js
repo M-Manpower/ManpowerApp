@@ -1,59 +1,53 @@
 ﻿(function () {
     'use strict';
-
-
+   
     const primarySkillListComponent = {
         bindings: { },
         templateUrl: 'modules/primarySkills/primarySkillsList.component-tmpl.html',
-        controller: ['_', 'filterFilter', primarySkillListController]
+        controller: ['_', 'filterFilter', 'primarySkillsService', primarySkillListController]
     };
-
-    function primarySkillListController(_, filterFilter) {
+   
+    function primarySkillListController(_, filterFilter, primarySkillsService) {
         
-        var ctrl = this;
+        var vm = this;
         
-        this.filter = "";        
-        this.isAllSkillsSelected = false;
+        vm.filter = "";
+        vm.isAllSkillsSelected = false;
                
-        this.primarySkillsOriginalState = [];
-        this.primarySkills = [];
+        vm.primarySkillsOriginalState = [];
+        vm.primarySkills = [];
         
-        this.$onInit = function () {
+        vm.$onInit = function () {
             
-            this.primarySkills = [
-               { id: 1, name: 'Java', description: 'This is a PL 1', isActive: true},
-               { id: 2, name: '.Net', description: 'This is a PL 2', isActive: false },
-               { id: 3, name: 'PHP', description: 'This is a PL 3', isActive: true },
-               { id: 4, name: 'C#', description: 'This is a PL 4', isActive: false },
-               { id: 5, name: 'VB.NET', description: 'This is a PL 5', isActive: true }
-            ];
+            //Get data from Service
+            vm.primarySkills = primarySkillsService.getPrimarySkills();
 
-            this.pager = {
+            vm.pager = {
                 pageSize: 20,
                 totalItems: this.primarySkills.length,
                 currentPage: 1              
             };
 
-            this.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
+            vm.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
      
         };  
 
-        this.$onChanges = function (changes) {
+        vm.$onChanges = function (changes) {
             
         };
 
-        this.filterChange = function () {
-            this.filtered = filterFilter(this.primarySkills, this.filter);
+        vm.filterChange = function () {
+            vm.filtered = filterFilter(this.primarySkills, this.filter);
             
             //Re-calculate pager
-            this.pager['totalItems'] = this.filtered.length;
-            this.pager['currentPage'] = 1;                        
-            this.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
+            vm.pager['totalItems'] = this.filtered.length;
+            vm.pager['currentPage'] = 1;
+            vm.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
         };
 
-        this.selectAllSkills = function () {
+        vm.selectAllSkills = function () {
 
-            _.each(this.primarySkills, (skill) => {
+            _.each(vm.primarySkills, (skill) => {
 
                 skill.selected = this.isAllSkillsSelected;
 
@@ -61,9 +55,9 @@
 
         };
 
-        this.deactivateSelectedSkills = function () {
+        vm.deactivateSelectedSkills = function () {
 
-            _.each(this.primarySkills, (skill) => {
+            _.each(vm.primarySkills, (skill) => {
 
                 if (skill.selected) {
                     skill.isActive = false;
@@ -75,7 +69,7 @@
        
     };
 
-    angular.module('manpowerApp')           
-          .component('primarySkillsList', primarySkillListComponent);    
+    angular.module('manpowerApp')
+      .component('primarySkillsList', primarySkillListComponent);
 
 })();

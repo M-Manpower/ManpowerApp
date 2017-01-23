@@ -21,15 +21,27 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="primarySkill in $ctrl.filtered = $ctrl.primarySkills | filter: $ctrl.filter | startFrom: ($ctrl.pager.currentPage - 1)*$ctrl.pager.pageSize | limitTo:$ctrl.pager.pageSize track by primarySkill.id">
+        <!--<tr ng-repeat="primarySkill in $ctrl.filtered = $ctrl.primarySkills | filter: $ctrl.filter | startFrom: ($ctrl.pager.currentPage - 1)*$ctrl.pager.pageSize | limitTo:$ctrl.pager.pageSize track by primarySkill.id">-->
+        <tr ng-repeat="primarySkill in $ctrl.filtered = $ctrl.primarySkills | filter: $ctrl.filter track by primarySkill.id">
             <!--<td>
-                <input type="checkbox" ng-model="primarySkill.selected" />
-            </td>-->
+            <input type="checkbox" ng-model="primarySkill.selected" />
+        </td>-->
             <td>{{primarySkill.name}}</td>
             <td>{{primarySkill.description}}</td>
             <td>
-                <i ng-if="primarySkill.isActive" class="glyphicon glyphicon-ok" style="color: green;" ng-click="primarySkill.isActive = !primarySkill.isActive"></i>
-                <i ng-if="!primarySkill.isActive" class="glyphicon glyphicon-remove" style="color: red;" ng-click="primarySkill.isActive = !primarySkill.isActive"></i>
+                <i ng-if="primarySkill.isActive" 
+                   class="glyphicon glyphicon-ok" 
+                   style="color: green; cursor:pointer;" 
+                   ng-click="primarySkill.isActive = !primarySkill.isActive">
+
+                </i>
+
+                <i ng-if="!primarySkill.isActive" 
+                   class="glyphicon glyphicon-remove" 
+                   style="color: red; cursor:pointer;" 
+                   ng-click="primarySkill.isActive = !primarySkill.isActive">
+
+                </i>
 
                 <!--<button ng-if="!primarySkill.isActive" class="btn btn-success" ng-click="primarySkill.isActive = true">Activate</button>-->
             </td>

@@ -7,3 +7,8 @@ C:\Users\felixm\Documents\training\ManpowerApp\Magenic.Manpower.Database\obj\Deb
 C:\Users\felixm\Documents\training\ManpowerApp\Magenic.Manpower.Database\obj\Debug\refactor.xml
 C:\Users\felixm\Documents\training\ManpowerApp\Magenic.Manpower.Database\obj\Debug\postdeploy.sql
 C:\Users\felixm\Documents\training\ManpowerApp\Magenic.Manpower.Database\obj\Debug\predeploy.sql
+C:\Users\JezM\Documents\Projects\ManpowerApp\Magenic.Manpower.Database\bin\Debug\Magenic.Manpower.Database.dacpac
+C:\Users\JezM\Documents\Projects\ManpowerApp\Magenic.Manpower.Database\bin\Debug\Magenic.Manpower.Database.dll
+C:\Users\JezM\Documents\Projects\ManpowerApp\Magenic.Manpower.Database\bin\Debug\Magenic.Manpower.Database.pdb
+C:\Users\JezM\Documents\Projects\ManpowerApp\Magenic.Manpower.Database\obj\Debug\Magenic.Manpower.Database.dll
+C:\Users\JezM\Documents\Projects\ManpowerApp\Magenic.Manpower.Database\obj\Debug\Magenic.Manpower.Database.pdb
