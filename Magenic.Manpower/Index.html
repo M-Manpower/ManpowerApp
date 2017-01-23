@@ -1,42 +1,112 @@
 ﻿<!DOCTYPE html>
 <html ng-app="manpowerApp">
 <head>
-    <title></title>
-	<meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
-    <link href="css/main.css" rel="stylesheet" />
+  <title></title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link href="css/site.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/side-menu.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="js/lodash.js"></script>
-    <script type="text/javascript" src="/js/angular.min.js"></script>
-    <script type="text/javascript" src="/js/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="/js/app.module.js"></script>
-    <script type="text/javascript" src="/js/config.route.js"></script>
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/angular-ui/ui-bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/angular-ui/ui-bootstrap-tpls.min.js"></script>
-    <script type="text/javascript" src="/modules/requestForm/requestForm-mdl.js"></script>
-    <script type="text/javascript" src="/modules/requestForm/requestForm-ctrl.js"></script>
-    <script type="text/javascript" src="/modules/requestForm/requestForm-svc.js"></script>
-    <script type="text/javascript" src="/modules/login/login-mdl.js"></script>
-    <script type="text/javascript" src="/modules/login/login-ctrl.js"></script>
-    <script type="text/javascript" src="/modules/dashboard/layoutHeader.js"></script>
-    <script type="text/javascript" src="/modules/dashboard/layoutFooter.js"></script>
+  <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/angular.min.js"></script>
+  <script type="text/javascript" src="/js/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="/js/underscore.min.js"></script>
+  <script type="text/javascript" src="/js/angular-underscore.js"></script>
+  <script type="text/javascript" src="/js/angular-ui-router.min.js"></script>
+  <script src="js/side-menu.js"></script>
 
-    <script type="text/javascript" src="/modules/primarySkills/primarySkillsList.component.js"></script>
-    
+  <script type="text/javascript" src="/js/mp-module.js"></script>
+  <script type="text/javascript" src="/js/mp-configRoute.js"></script>
+  <script type="text/javascript" src="/js/mp-constants.js"></script>
+  <script type="text/javascript" src="/js/mp-xhr.js"></script>
+  <script type="text/javascript" src="/modules/requestForm/requestForm-mdl.js"></script>
+  <script type="text/javascript" src="/modules/requestForm/requestForm-ctrl.js"></script>
+  <script type="text/javascript" src="/modules/requestForm/requestForm-svc.js"></script>
+  <script type="text/javascript" src="/modules/login/login-mdl.js"></script>
+  <script type="text/javascript" src="/modules/login/login-context.js"></script>
+  <script type="text/javascript" src="/modules/login/login-svc.js"></script>
+  <script type="text/javascript" src="/modules/login/login-ctrl.js"></script>
+  <script type="text/javascript" src="/modules/dashboard/layoutHeader.js"></script>
+  <script type="text/javascript" src="/modules/dashboard/layoutFooter.js"></script>
+
+  <script src="modules/primarySkills/primarySkillsList.component.js"></script>
+  <script src="modules/roles/roles-mdl.js"></script>
+  <script src="modules/roles/roles-svc.js"></script>
+  <script src="modules/roles/roles-ctrl.js"></script>
+  <script src="modules/roles/rolesList.js"></script>
 </head>
 <body>
-    <a ui-sref="login">Login</a> |
-    <a ui-sref="primarySkills">primary skills</a>
-
-    <!--<layout-header></layout-header>-->
-    <div id="container">
-       <ui-view></ui-view>
+  <div class="navbar navbar-inverse navbar-fixed-top app-header">
+    <div class="app-brand">
+      <div class="container">
+        <img src="/images/W_MagenicLogo.png" /> <div class="app-manila">MANILA</div>
+      </div>
     </div>
-    <!--<layout-footer></layout-footer>-->
-       
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a ui-sref="home" class="navbar-brand"><span class="glyphicon glyphicon-user"></span> Manpower App</a>
+      </div>
+      <div class="">
+        <ul class="nav navbar-nav pull-right">
+          <li><a>Ann Penus</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container body-content">
+    <div class="row">
+      <div class="col-sm-3">
+        <!--can be converted into a component handling the selected item in the side navbar -->
+        <nav class="navbar navbar-default sidebar" role="navigation">
+          <div>
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a ui-sref="roles"><span class="glyphicon glyphicon-certificate"></span> Roles</a></li>
+                <li><a ui-sref="primarySkills"><span class="glyphicon glyphicon-education"></span> Primary Skills</a></li>
+                <li><a ui-sref="requestForm"><span class="glyphicon glyphicon-bullhorn"></span> Request</a></li>
+                <!--<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                  <ul class="dropdown-menu forAnimate" role="menu">
+                    <li><a href="">Crear</a></li>
+                    <li><a href="#">Modificar</a></li>
+                    <li><a href="#">Reportar</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Informes</a></li>
+                  </ul>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="col-sm-9">
+        <ui-view></ui-view>
+      </div>
+    </div>
+    <div class="navbar-fixed-bottom">
+      <footer>
+        <hr />
+        <p class="pull-right footer-txt">&copy; 2016 - Magenic Manila, Inc.</p>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
-
