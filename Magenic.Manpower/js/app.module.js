@@ -4,6 +4,7 @@
     angular.module('manpowerApp',
         ['loginApp',
         'requestFormApp',
+        'myAccessList',
         'ui.router'
         ]);
 })();
