@@ -1,47 +1,75 @@
 ﻿(function () {
     'use strict';
-
-    
+   
     const primarySkillListComponent = {
-        bindings: {},
-        templateUrl: 'modules/primarySkills/primarySkillsList-tpl.html',
-        controller: function () {
-
-            this.$onInit = function () {
-            
-                this.primarySkills = [
-                    { id: 1, name: 'Java', description: 'This is a PL 1', active: false },
-                    { id: 2, name: '.Net', description: 'This is a PL 2', active: false },
-                    { id: 3, name: 'PHP', description: 'This is a PL 3', active: false },
-                    { id: 4, name: 'C#', description: 'This is a PL 4', active: false },
-                    { id: 5, name: 'VB.NET', description: 'This is a PL 5', active: false }
-                ];
-                
-            };
-
-            this.$onChanges = function (changes) {
+        bindings: { },
+        templateUrl: 'modules/primarySkills/primarySkillsList.component-tmpl.html',
+        controller: ['_', 'filterFilter', 'primarySkillsService', primarySkillListController]
+    };
+   
+    function primarySkillListController(_, filterFilter, primarySkillsService) {
+        
+        var vm = this;
+        
+        vm.filter = "";
+        vm.isAllSkillsSelected = false;
                
-            };
-
-            this.selectedSkill = function (id) {
-
-                console.log(id);
-
-            };
-
-            this.deactivate = function () {
-
-
-
-            };
+        vm.primarySkillsOriginalState = [];
+        vm.primarySkills = [];
+        
+        vm.$onInit = function () {
             
-        }
+            //Get data from Service
+            vm.primarySkills = primarySkillsService.getPrimarySkills();
+
+            vm.pager = {
+                pageSize: 20,
+                totalItems: this.primarySkills.length,
+                currentPage: 1              
+            };
+
+            vm.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
+     
+        };  
+
+        vm.$onChanges = function (changes) {
+            
+        };
+
+        vm.filterChange = function () {
+            vm.filtered = filterFilter(this.primarySkills, this.filter);
+            
+            //Re-calculate pager
+            vm.pager['totalItems'] = this.filtered.length;
+            vm.pager['currentPage'] = 1;
+            vm.pager['maxSize'] = Math.ceil(this.pager.totalItems / this.pager.pageSize);
+        };
+
+        vm.selectAllSkills = function () {
+
+            _.each(vm.primarySkills, (skill) => {
+
+                skill.selected = this.isAllSkillsSelected;
+
+            });
+
+        };
+
+        vm.deactivateSelectedSkills = function () {
+
+            _.each(vm.primarySkills, (skill) => {
+
+                if (skill.selected) {
+                    skill.isActive = false;
+                }
+
+            });
+
+        };
+       
     };
 
-
     angular.module('manpowerApp')
-         .component('primarySkillsList', primarySkillListComponent);
+      .component('primarySkillsList', primarySkillListComponent);
 
-  
-    
 })();
