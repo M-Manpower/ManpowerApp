@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Cors;
 using Newtonsoft.Json.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using Magenic.Manpower.WebApi.ServiceLogic;
+using Magenic.Manpower.WebApi.DTO;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -46,10 +47,9 @@ namespace Magenic.Manpower.WebApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]JObject value)
+        public ServiceResponseDTO<bool> Post([FromBody]JObject value)
         {
-            var result = _authenticationSvc.Authenticate("admin@magenic.com", "admadm12345");
-            return;
+            return _authenticationSvc.Authenticate("admin@magenic.com", "admadm12345");                  
         }
 
         // PUT api/values/5

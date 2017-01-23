@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Magenic.Manpower.WebApi.Models;
+using Magenic.Manpower.WebApi.DTO;
 using Microsoft.Extensions.DependencyInjection;
 using Magenic.Manpower.WebApi.Services.Repository;
 
@@ -15,22 +15,21 @@ namespace Magenic.Manpower.WebApi.ServiceLogic
         {
             _userContext = container.GetService<IUserContextRepository>();
         }
-        public UserDTO Authenticate(string username, string password)
+        public ServiceResponseDTO<bool> Authenticate(string username, string password)
         {
+            var response = new ServiceResponseDTO<bool>();
+            response.Success = false;
+            response.ResponseData = false;
+
             var user = _userContext.GetByUsernameAndPwd(username, password);
 
             if (user != null)
             {
-                return new UserDTO
-                {
-                    Username = user.Email,
-                    Email = user.Email,
-                    Firstname = user.Firstname,
-                    Lastname = user.Lastname
-                };
+                response.ResponseData = true;
+                response.Success = true;                                
             }
 
-            return null;            
+            return response;            
         }
     }
 
